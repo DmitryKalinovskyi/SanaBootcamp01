@@ -18,9 +18,9 @@ namespace Task_1.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Entered(User user)
         {
-            return View();
+            return View(user);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

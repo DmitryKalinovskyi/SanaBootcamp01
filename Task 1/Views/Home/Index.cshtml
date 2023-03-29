@@ -1,14 +1,13 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
-    ViewData["Name"] = "Dmitry Kalinovskyi";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
 
-    <ol type="i" style="text-align:left;">
-        <li>MVC App</li>
-        <li>Enter name</li>
-        <li>Output Hello, @ViewData["Name"]!</li>
-    </ol>
+    @using(Html.BeginForm("Entered", "Home", FormMethod.Post)){
+        <h1 class="display-4">Enter your name: </h1>
+        @Html.TextBox("Name");
+
+        <button type="submit">Send name</button>
+    }
 </div>
